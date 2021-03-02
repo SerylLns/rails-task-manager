@@ -1,0 +1,9 @@
+<h1> <%= @task.title %> </h1>
+
+<p> <%= @task.details %> </p>
+
+<p><%= link_to 'Mark as done !' , task_done_path %></p>
+
+<p> <i class="fas fa-igloo"></i> <%= link_to "Summary", tasks_path  %> </p>
+<p> <i class="far fa-edit"></i> <%= link_to "edit task", task_edit_path(@task)  %><p>
+<p><i class="fas fa-trash-alt"> <%= link_to "Remove Task", task_path(@task) , method: :delete, data: {confirm: "Are you sure ?"}  %> </i></p>
